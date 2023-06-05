@@ -1,6 +1,7 @@
 import { AppProps } from "next/app";
 import Head from "next/head";
 import { MantineProvider } from "@mantine/core";
+import "../styles/globals.css";
 
 export default function App(props) {
   const { Component, pageProps } = props;
@@ -20,6 +21,15 @@ export default function App(props) {
         withNormalizeCSS
         theme={{
           /** Put your mantine theme override here */
+          // globalStyles: (theme) => ({
+          //   "*": {
+          //     transition: "all 4s ease-in-out",
+          //   },
+
+          //   body: {
+          //     // transition: "all 0.4s ease",
+          //   },
+          // }),
           colorScheme: "light",
         }}>
         <Component {...pageProps} />
